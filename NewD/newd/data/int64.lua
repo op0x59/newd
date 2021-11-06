@@ -33,7 +33,7 @@ setmetatable(int64, {
                 error("Cannot create int64 for an unsupported type: " .. type(value) .. ".")
             end
     
-            if not (value >= -2147483648 and value <= 2147483647) then
+            if not (value >= -9223372036854775808 and value <= 9223372036854775807) then
                 error("Cannot create int64 from number: " .. tostring(value) .. ".")
             end
 
