@@ -2,6 +2,19 @@
 newd (new disassembler) lol i couldn't figure a good name so.
 
 # output
+```lua
+if true then
+    print(true and false)
+    print(true or false)
+else
+    print('aaaaa')
+    for i = 1, 100 do
+        local function add() return false end
+    end
+end
+```
+
+when feeding newd the bytecode of the previous code snippet you will be greeted with the following disassembly view
 ```asm
 [NEWD] - detected virtual machine signature LuaQ VM
 func_0000000C[nupv->0, narg->0](@main.lua)
