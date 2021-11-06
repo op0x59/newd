@@ -90,4 +90,7 @@ here is a quick overview for each type
     * this data type can be constructed in a few ways ``int16(279)``, ``int16(1, 2)``, ``int16(byte('X'), byte('D'))``, ``int16('H')``
 * int32
     * this data type holds four bytes which store the overall value for the type.
-    * this data type can be constructed in a few ways ``int32(279)``, ``int32(1, 2, 9, 10)``, ``int32(byte('X'), byte('D'), int16('A'))``, ``int32('H')``
+    * this data type can be constructed in a few ways ``int32(279000)``, ``int32(1, 2, 9, 10)``, ``int32(byte('X'), byte('D'), int16('A'))``, ``int32('H')``
+* int64
+    * this data type holds eight bytes which store the overall value for the type. (wow do you see a pattern yet?)
+    * this data type is in the works as currently it is not working but it's not used atm either.
