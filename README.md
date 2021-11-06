@@ -97,8 +97,16 @@ here is a quick overview for each type
 
 ## the usertype
 this type honestly deserves its own section because in order to make this it was an actual living hell.
+example one:
 ```lua
 usertype("sizet", {int32})
 local s = sizet(1000000)
 print(s.values[1].value) --> 1000000
+```
+
+example two:
+```lua
+usertype("vheader", {byte, byte, byte, byte, byte, int32})
+local header = stream:read(vheader) --> assuming there was enough bytes to construct all the inside types of the usertype 'vheader' it will return the type
+```
 ```
