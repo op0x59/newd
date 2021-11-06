@@ -73,3 +73,12 @@ end
 ```
 
 # the type system
+the newd library currently only contains a select few datatypes being
+``
+byte     - v1.0
+bytelist - v1.0
+int16    - v1.0
+int32    - v1.0
+int64    - v1.0
+usertype - v1.0
+``
