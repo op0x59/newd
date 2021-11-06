@@ -72,7 +72,7 @@ return require("newd/vm/virtualmachine").new(function(self)
 end
 ```
 
-# the type system
+# the base type system
 the newd library currently only contains a select few datatypes being ``byte``, ``bytelist``, ``int16``, ``int32``, ``int64``, and ``usertype``
 these types act as constructors for an object of the specified type; calling ``byte(10)`` creates a byte type with the value of 10 as it's only byte.
 byte can also be constructed with a string parameter however it is limited to one character ``byte('A')``
@@ -88,3 +88,6 @@ here is a quick overview for each type
 * int16
     * this data type holds two bytes which store the overall value for the type.
     * this data type can be constructed in a few ways ``int16(279)``, ``int16(1, 2)``, ``int16(byte('X'), byte('D'))``, ``int16('H')``
+* int32
+    * this data type holds four bytes which store the overall value for the type.
+    * this data type can be constructed in a few ways ``int32(279)``, ``int32(1, 2, 9, 10)``, ``int32(byte('X'), byte('D'), int16('A'))``, ``int32('H')``
