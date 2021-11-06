@@ -76,3 +76,11 @@ end
 the newd library currently only contains a select few datatypes being ``byte``, ``bytelist``, ``int16``, ``int32``, ``int64``, and ``usertype``
 these types act as constructors for an object of the specified type; calling ``byte(10)`` creates a byte type with the value of 10 as it's only byte.
 byte can also be constructed with a string parameter however it is limited to one character ``byte('A')``
+
+here is a quick overview for each type
+* byte
+    * this data type is the basic building block for all other types if the other types cannot construct a byte out of anything you are sending it; it will error.
+    * this data type can be constructed in two ways; ``byte(1)`` && ``byte('A')``
+* bytelist
+    * this data type was a pain in the ass to implement because it adds a whole new layer of complexity on top of the data type system. a bytelist is an undetermined size therefore it is dynamic and when things are dynamic it is hard to read them unless you supply a length (which i had to enforce for the bytestream utility)
+    * a bytelist can be constructed in many ways; ``bytelist(1, 2, 3)``, ``bytelist(1, 'A', 2)``, ``bytelist('Hello, World!')``, ``bytelist(byte(1), int32(100000))``
