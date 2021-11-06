@@ -94,3 +94,11 @@ here is a quick overview for each type
 * int64
     * this data type holds eight bytes which store the overall value for the type. (wow do you see a pattern yet?)
     * this data type is in the works as currently it is not working but it's not used atm either.
+
+## the usertype
+this type honestly deserves its own section because in order to make this it was an actual living hell.
+```lua
+usertype("sizet", {int32})
+local s = sizet(1000000)
+print(s.values[1].value) --> 1000000
+```
