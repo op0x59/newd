@@ -74,3 +74,5 @@ end
 
 # the type system
 the newd library currently only contains a select few datatypes being ``byte``, ``bytelist``, ``int16``, ``int32``, ``int64``, and ``usertype``
+these types act as constructors for an object of the specified type; calling ``byte(10)`` creates a byte type with the value of 10 as it's only byte.
+byte can also be constructed with a string parameter however it is limited to one character ``byte('A')``
