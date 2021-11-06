@@ -1,5 +1,7 @@
 # newd
 newd (new disassembler) lol i couldn't figure a good name so.
+the point of this project was simply a POC (proof of concept) on typed deserialization methods 
+along with configurable disassemblers.
 
 # output
 ```lua
@@ -69,3 +71,5 @@ return require("newd/vm/virtualmachine").new(function(self)
     function self:dump(chunk) end
 end
 ```
+
+# the type system
