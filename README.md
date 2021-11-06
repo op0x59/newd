@@ -53,3 +53,6 @@ address    opcode    jmp    opname                        note
 0000D2     [01E]            return      0, 2  - -    -
 0000D6     [01E]            return      0, 1  - -    -
 ```
+
+# how to use
+once you have downloaded the src for newd you can simply go to the main.lua file and feed newd.bruteforce function with a bytecode string.
