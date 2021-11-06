@@ -85,3 +85,6 @@ here is a quick overview for each type
     * this data type was a pain in the ass to implement because it adds a whole new layer of complexity on top of the data type system. a bytelist is an undetermined size therefore it is dynamic and when things are dynamic it is hard to read them unless you supply a length (which i had to enforce for the bytestream utility)
     * while the bytelist is useful it makes usertypes that utilize the bytelist impossibly hard to read without supplying a length.
     * a bytelist can be constructed in many ways; ``bytelist(1, 2, 3)``, ``bytelist(1, 'A', 2)``, ``bytelist('Hello, World!')``, and ``bytelist(byte(1), int32(100000))``
+* int16
+    * this data type holds two bytes which store the overall value for the type.
+    * this data type can be constructed in a few ways ``int16(279)``, ``int16(1, 2)``, ``int16(byte('X'), byte('D'))``, ``int16('H')``
