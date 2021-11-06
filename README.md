@@ -56,3 +56,16 @@ address    opcode    jmp    opname                        note
 
 # how to use
 once you have downloaded the src for newd you can simply go to the main.lua file and feed newd.bruteforce function with a bytecode string.
+
+# creating your own deserialization configuration
+there isn't very good support for this yet but I plan on making some updates in the future to make this process a lot easier.
+here is the template configuration file for newd:
+
+```lua
+return require("newd/vm/virtualmachine").new(function(self)
+    self.virtualMachineName = "LuaQ VM"
+    self.signature = {}
+    function self:deserialize(bytecode) end
+    function self:dump(chunk) end
+end
+```
