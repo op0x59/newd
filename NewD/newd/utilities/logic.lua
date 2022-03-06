@@ -45,8 +45,20 @@ logicalXor = function(left, right)
     return remainder
 end
 
+-- solution from: https://stackoverflow.com/questions/32387117/bitwise-and-in-lua
+-- author: ryanpattison
 logicalBand = function(left, right)
-    return ((left+right)-logicalXor(left,right))/2
+    local result = 0
+    local bitval = 1
+    while left > 0 and right > 0 do 
+        if left % 2 == 1 and right % 2 == 1 then
+            result = result + bitval
+        end
+        bitval = bitval * 2
+        left = math.floor(left/2)
+        right = math.floor(right/2)
+    end
+    return result
 end
 
 logicalBor = function(a1, a2, a3, ...)
